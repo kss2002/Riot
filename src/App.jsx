@@ -1,5 +1,7 @@
 import Counter from '../src/page/Counter.jsx';
 import ProfileCard from '../src/page/ProfileCard.jsx';
+import DarkModeToggle from './state/DarkModeToggle.jsx';
+import InputForm from './state/InputForm.jsx';
 
 export default function App() {
   return (
@@ -11,6 +13,14 @@ export default function App() {
       <div>
         <h1>프로필 카드 예제</h1>
         <ProfileCard />
+      </div>
+      <div>
+        <h1>InputForm 예제</h1>
+        <InputForm />
+      </div>
+      <div>
+        <h1>DarkModeToggle 예제</h1>
+        <DarkModeToggle />
       </div>
     </>
   );

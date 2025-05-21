@@ -1,5 +1,6 @@
 import Counter from '../src/page/Counter.jsx';
 import ProfileCard from '../src/page/ProfileCard.jsx';
+import UserList from './effect/UserList.jsx';
 import DarkModeToggle from './state/DarkModeToggle.jsx';
 import InputForm from './state/InputForm.jsx';
 
@@ -21,6 +22,11 @@ export default function App() {
       <div>
         <h1>DarkModeToggle 예제</h1>
         <DarkModeToggle />
+      </div>
+      <hr />
+      <div>
+        <h1>useEffect 예제</h1>
+        <UserList />
       </div>
     </>
   );

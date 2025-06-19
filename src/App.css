@@ -1,0 +1,103 @@
+/* 전체 레이아웃 */
+body {
+  background: whitesmoke;
+  font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.p-6 {
+  padding: 2rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.space-y-6 > * + * {
+  margin-top: 2rem;
+}
+
+.text-2xl {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+input[type='text'] {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+input[type='text']:focus {
+  border: 1.5px solid #6366f1;
+  outline: none;
+}
+
+.grid {
+  display: grid;
+}
+.grid-cols-1 {
+  grid-template-columns: 1fr;
+}
+.gap-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.border {
+  border: 2px solid #e5e7eb;
+}
+
+.rounded {
+  border-radius: 0.75rem;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* 랭크/티어 카드 스타일 */
+.rank-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.rank-card p {
+  font-size: 1rem;
+  margin: 0.25rem 0;
+}
+
+/* 프로필 아이콘 등 이미지 스타일 */
+img[alt='Profile Icon'] {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 2px solid #6366f1;
+  background: #fff;
+  margin-bottom: 0.5rem;
+}
+
+/* 로딩/에러 메시지 */
+p {
+  color: #222;
+}
+p:has([role='status']) {
+  color: #6366f1;
+}
+p:has([role='alert']) {
+  color: #ef4444;
+}

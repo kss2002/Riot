@@ -16,3 +16,6 @@ If you are developing a production application, we recommend using TypeScript wi
 https://developer.riotgames.com/
 
 api는 24시간마다 리셋시킬 것.
+
+관련 글 >
+https://kimwoolina.tistory.com/136?category=1193655

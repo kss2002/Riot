@@ -1,5 +1,6 @@
 const BASE_URL = 'https://asia.api.riotgames.com';
 
+// API 키가 필요합니다.
 const getHeaders = () => ({
   'X-Riot-Token': import.meta.env.VITE_RIOT_API_KEY,
 });

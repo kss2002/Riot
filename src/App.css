@@ -26,11 +26,22 @@ body.dark {
 .max-w-xl.dark {
   background: #23272f;
   color: #f1f5f9;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
 }
 .p-6.light,
 .max-w-xl.light {
   background: #fff;
   color: #222;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* p 태그 라이트 - 다크 */
+p.light {
+  color: black;
+}
+
+p.dark {
+  color: white;
 }
 
 .max-w-xl {

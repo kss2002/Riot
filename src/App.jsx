@@ -56,20 +56,32 @@ export default function App() {
         />
 
         <div className="p-4 border rounded shadow">
-          <RankTierByPUUID gameName={gameName} tagLine={tagLine} />
+          <RankTierByPUUID gameName={gameName} tagLine={tagLine} mode={mode} />
         </div>
 
         <div className="grid grid-cols-1 gap-6 mt-6">
           <div className="p-4 border rounded shadow">
-            <SummonerInfoFetch gameName={gameName} tagLine={tagLine} />
+            <SummonerInfoFetch
+              gameName={gameName}
+              tagLine={tagLine}
+              mode={mode}
+            />
           </div>
 
           <div className="p-4 border rounded shadow">
-            <SummonerInfoSWR gameName={gameName} tagLine={tagLine} />
+            <SummonerInfoSWR
+              gameName={gameName}
+              tagLine={tagLine}
+              mode={mode}
+            />
           </div>
 
           <div className="p-4 border rounded shadow">
-            <SummonerInfoQuery gameName={gameName} tagLine={tagLine} />
+            <SummonerInfoQuery
+              gameName={gameName}
+              tagLine={tagLine}
+              mode={mode}
+            />
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchSummonerByRiotId } from '../api/riot';
 
-export function SummonerInfoFetch({ gameName, tagLine }) {
+export function SummonerInfoFetch({ gameName, tagLine, mode }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -19,8 +19,8 @@ export function SummonerInfoFetch({ gameName, tagLine }) {
       .finally(() => setLoading(false));
   }, [gameName, tagLine]);
 
-  if (loading) return <p>로딩 중...</p>;
-  if (error) return <p>❌ 에러: {error}</p>;
+  if (loading) return <p className={mode}>로딩 중...</p>;
+  if (error) return <p className={mode}>❌ 에러: {error}</p>;
   if (!data) return null;
 
   // PUUID 콘솔에 출력
@@ -29,8 +29,8 @@ export function SummonerInfoFetch({ gameName, tagLine }) {
   return (
     <div>
       <h3>소환사 정보 (fetch방식)</h3>
-      <p>이름: {data.gameName}</p>
-      <p>태그라인: {data.tagLine}</p>
+      <p className={mode}>이름: {data.gameName}</p>
+      <p className={mode}>태그라인: {data.tagLine}</p>
     </div>
   );
 }

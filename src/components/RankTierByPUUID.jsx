@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { fetchSummonerByRiotId, fetchLeagueInfoByPUUID } from '../api/riot';
 
-export function RankTierByPUUID({ gameName, tagLine }) {
+export function RankTierByPUUID({ gameName, tagLine, mode }) {
   // Step 1: Riot ID → PUUID
   const {
     data: account,
@@ -26,9 +26,12 @@ export function RankTierByPUUID({ gameName, tagLine }) {
     enabled: !!puuid,
   });
 
-  if (loadingAccount || loadingLeague) return <p>로딩 중...</p>;
-  if (errorAccount) return <p>❌ 소환사 정보 에러: {errorAccount.message}</p>;
-  if (errorLeague) return <p>❌ 랭크 정보 에러: {errorLeague.message}</p>;
+  if (loadingAccount || loadingLeague)
+    return <p className={mode}>로딩 중...</p>;
+  if (errorAccount)
+    return <p className={mode}>❌ 소환사 정보 에러: {errorAccount.message}</p>;
+  if (errorLeague)
+    return <p className={mode}>❌ 랭크 정보 에러: {errorLeague.message}</p>;
   if (!leagueInfo) return null;
 
   // 솔로랭크 정보만 추출
@@ -53,7 +56,7 @@ export function RankTierByPUUID({ gameName, tagLine }) {
   return (
     <div>
       <h3>PUUID 기반 랭크/티어 정보</h3>
-      <p>
+      <p className={mode}>
         🏆 티어:{' '}
         {soloRank
           ? `${tierKor[soloRank.tier] || soloRank.tier} ${soloRank.rank} (${

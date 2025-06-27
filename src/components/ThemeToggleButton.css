@@ -14,10 +14,12 @@
   position: relative;
 }
 .theme-toggle-btn.light {
-  background: #fffbe7;
+  background: bisque;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .theme-toggle-btn.dark {
   background: white;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
 }
 .icon-wrapper {
   display: flex;

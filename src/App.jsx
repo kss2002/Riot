@@ -33,6 +33,11 @@ export default function App() {
           <ThemeToggleButton />
         </div>
         <h1 className="text-2xl font-bold">🔍 소환사 정보 조회 비교</h1>
+        <h2 className="font-bold">
+          <a href="https://developer.riotgames.com/" target="_blanck">
+            api키는 24시간마다 리셋필요
+          </a>
+        </h2>
 
         <input
           type="text"

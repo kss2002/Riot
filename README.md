@@ -19,3 +19,8 @@ api는 24시간마다 리셋시킬 것.
 
 관련 글 >
 https://kimwoolina.tistory.com/136?category=1193655
+
+## 네트리파이
+
+네트리파이도 24시간마다 api키를 리셋시켜줘야 함.
+https://app.netlify.com/projects/riot-p/configuration/env#environment-variables

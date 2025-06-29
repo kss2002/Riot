@@ -1,4 +1,3 @@
-import React from 'react';
 import useThemeStore from '../storeTheme';
 import './ThemeToggleButton.css';
 
